@@ -17,13 +17,22 @@ package progsupermercato;
  * @author gabriel.ricaldone
  */
 public class TesseraOro extends Tessera {
-    TesseraOro(String nomeCliente, String codiceCliente) {
+    TesseraOro(String nomeCliente, String codiceCliente) {   
         super(nomeCliente,codiceCliente);
         punti = 0;
     }
     
     TesseraOro() {
-       super();
-       punti = 0;
+       super.punti = 0;
+    }
+    
+    @Override
+    public void acquisto(int importo) {
+        if(importo < 100) {
+            punti += importo / 10;
+        } else {
+            punti += (importo/10) * 2;
+        }
+        
     }
 }

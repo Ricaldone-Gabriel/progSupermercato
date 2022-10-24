@@ -15,7 +15,19 @@ public class ProgSupermercato {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        TesseraOro TO1 = new TesseraOro();
+        TesseraOro TO2 = new TesseraOro("sus","sus1");
+        System.out.println(TO1.getNomeCliente());   
+        System.out.println(TO2.getNomeCliente());
+        System.out.println(TO1.getPunti());
+        TO1.acquisto(120);
+        System.out.println(TO1.getPunti());
+        TO1.ritiraPremio();
+        System.out.println(TO1.getPunti());
+        TO1.acquisto();
+        System.out.println(TO1.getPunti());
+        TO1.ritiraPremio();
+        System.out.println(TO1.getPunti());
     }
     
 }
