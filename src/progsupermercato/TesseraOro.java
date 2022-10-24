@@ -33,6 +33,19 @@ public class TesseraOro extends Tessera {
         } else {
             punti += (importo/10) * 2;
         }
-        
+    }
+    
+    @Override
+    public void acquisto() {
+        int importo = -1; 
+        System.out.println("Quanto ha speso?");
+        do {
+            importo = input.nextInt();
+        } while(importo < 0);
+        if(importo < 100) {
+            punti += importo / 10;
+        } else {
+            punti += (importo/10) * 2;
+        }
     }
 }
