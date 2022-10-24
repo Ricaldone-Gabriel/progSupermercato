@@ -16,9 +16,20 @@ public class ProgSupermercato {
      */
     public static void main(String[] args) {
         TesseraOro TO1 = new TesseraOro();
-        TesseraOro TO2 = new TesseraOro("sus","sus1");
+        TesseraOro TO2 = new TesseraOro("test4","test3");
+        TesseraOro TO3 = new TesseraOro();
+        Tessera T1 = new Tessera();
+        Tessera T2 = new Tessera("test","test1");
+        Tessera T3 = new Tessera();
+              
         System.out.println(TO1.getNomeCliente());   
         System.out.println(TO2.getNomeCliente());
+        System.out.println(TO3.getNomeCliente());
+        
+        System.out.println(T1.getNomeCliente());   
+        System.out.println(T2.getNomeCliente());
+        System.out.println(T3.getNomeCliente());
+        
         System.out.println(TO1.getPunti());
         TO1.acquisto(120);
         System.out.println(TO1.getPunti());
@@ -28,6 +39,16 @@ public class ProgSupermercato {
         System.out.println(TO1.getPunti());
         TO1.ritiraPremio();
         System.out.println(TO1.getPunti());
+        
+        System.out.println(T1.getPunti());
+        T1.acquisto(120);
+        System.out.println(T1.getPunti());
+        T1.ritiraPremio();
+        System.out.println(T1.getPunti());
+        T1.acquisto();
+        System.out.println(T1.getPunti());
+        T1.ritiraPremio();
+        System.out.println(T1.getPunti());
     }
     
 }
