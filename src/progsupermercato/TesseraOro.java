@@ -31,7 +31,7 @@ public class TesseraOro extends Tessera {
         if(importo < 100) {
             punti += importo / 10;
         } else {
-            punti += (importo/10) * 2;
+            punti += ((importo-100)/10) * 2 + 10;
         }
     }
     
